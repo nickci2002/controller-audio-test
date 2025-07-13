@@ -1,0 +1,5 @@
+/home/nick/Programming/controller-audio-test/build/CMakeFiles/controlleraudiotest.dir
+/home/nick/Programming/controller-audio-test/build/CMakeFiles/edit_cache.dir
+/home/nick/Programming/controller-audio-test/build/CMakeFiles/rebuild_cache.dir
+/home/nick/Programming/controller-audio-test/build/externals/CMakeFiles/edit_cache.dir
+/home/nick/Programming/controller-audio-test/build/externals/CMakeFiles/rebuild_cache.dir
