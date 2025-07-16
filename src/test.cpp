@@ -2,12 +2,14 @@
 #include <SDL3/SDL_gamepad.h>
 
 int main(int argc, char* args[]) {
-    bool hasGamepad = SDL_HasGamepad();
-    if (hasGamepad) {
-        std::cout << "Gamepad is available." << std::endl;
-    } else {
-        std::cout << "No gamepad available." << std::endl;
+    for (int i = 0; i < SDL_GetNumAudioDrivers(); ++i) {
+        const char* driverName = SDL_GetAudioDriver(i);
+        if (driverName) {
+            std::cout << "Audio Driver " << i << ": " << driverName << std::endl;
+        } else {
+            std::cerr << "Error retrieving audio driver " << i << ": " << SDL_GetError() << std::endl;
+        }
     }
-    
+
     return 0;
 }
