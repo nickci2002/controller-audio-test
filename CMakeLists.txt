@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 project(ControllerAudioTest VERSION 1.0)
 
-find_package(SDL3 3.1.2 CONFIG)
+find_package(SDL3 3.2.0 CONFIG)
 
 add_subdirectory(externals)
 include_directories(src)
@@ -16,3 +16,4 @@ set(SOURCE
 
 add_executable(controlleraudiotest ${SOURCE})
 target_link_libraries(controlleraudiotest PRIVATE SDL3::SDL3)
+target_compile_definitions(controlleraudiotest PRIVATE -DHAVE_HIDAPI=1)
