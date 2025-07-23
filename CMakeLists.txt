@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 project(ControllerAudioTest VERSION 1.0)
 
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+find_package(FFmpeg 5.1.2 MODULE)
 find_package(SDL3 3.2.0 CONFIG)
 
 add_subdirectory(externals)
@@ -15,5 +17,4 @@ set(SOURCE
 )
 
 add_executable(controlleraudiotest ${SOURCE})
-target_link_libraries(controlleraudiotest PRIVATE SDL3::SDL3)
-target_compile_definitions(controlleraudiotest PRIVATE -DHAVE_HIDAPI=1)
+target_link_libraries(controlleraudiotest PRIVATE SDL3::SDL3 FFmpeg::ffmpeg)
